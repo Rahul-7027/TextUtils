@@ -44,11 +44,11 @@ export default function TextForm(props) {
                     <h2 style={{ textAlign: "center" }}>{props.heading}</h2>
                     <textarea className="form-control" onChange={handleChange} style={{ backgroundColor: props.mode === "light" ? "white" : "#042743", color: props.mode === "light" ? "black" : "white" }} value={text} id="exampleFormControlTextarea1" rows="8"></textarea>
                 </div>
-                <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert To UpperCase</button>
-                <button className="btn btn-danger mx-2" onClick={handleLpClick}>Convert To LowerCase</button>
-                <button className="btn btn-success mx-2" onClick={handleClean}>Clear</button>
-                <button className="btn btn-warning mx-2" onClick={handleCopy}>Copy</button>
-                <button className="btn btn-success mx-2" onClick={removeSpace}>Remove Extra Space</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Convert To UpperCase</button>
+                <button className="btn btn-danger mx-2 my-2" onClick={handleLpClick}>Convert To LowerCase</button>
+                <button className="btn btn-success mx-2 my-2" onClick={handleClean}>Clear</button>
+                <button className="btn btn-warning mx-2 my-2" onClick={handleCopy}>Copy</button>
+                <button className="btn btn-success mx-2 my-2" onClick={removeSpace}>Remove Extra Space</button>
 
 
             </div>

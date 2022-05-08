@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
@@ -8,7 +7,7 @@ import Alert from './component/Alert';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 
 function App() {
@@ -44,23 +43,24 @@ function App() {
     }
   }
   return (
-    <div>
-      <Router>
-        <Navbar title="TextUtils" aboutText="About US" mode={mode} toggleMode={toggleMode} modeText={modeText} />
-        <Alert alert={alert} />
+    <Router>
+      <Navbar title="TextUtils" aboutText="About US" mode={mode} toggleMode={toggleMode} modeText={modeText} />
+      <Alert alert={alert} />
+      <Switch>
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <TextForm showAlert={showAlert} heading="Enter Your Text Analyze" mode={mode} />
-          </Route>
-        </Switch>
+        <Route path="/about">
+          <About />
+        </Route>
 
-      </Router>
-    </div>
+        <Route path="/">
+        <TextForm showAlert={showAlert} heading="Enter Your Text Analyze" mode={mode} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
+
+
+
